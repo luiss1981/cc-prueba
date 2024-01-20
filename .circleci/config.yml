@@ -6,14 +6,30 @@ jobs:
       - image: cimg/base:stable
     steps:
       - run: echo "Hola mundo"
-  instalacion_python:
+  despidete:
     docker:
-      - image: python:3.10-slim-buster
+      - image: cimg/base:stable
     steps:
-      - run: python3
+      - run: echo "Adios mundo"
 
 workflows:
-  hello:
+  flow1:
     jobs:
       - saluda
-      - instalacion_python
+      - despidete
+  flow2:
+    jobs:
+      - saluda
+      - despidete:
+          requires:
+            - saluda
+  flow3:
+    jobs:
+      - saluda
+      - approve:
+          type: approval
+          requires:
+            - saluda
+      - despidete:
+          requires:
+            - approval
