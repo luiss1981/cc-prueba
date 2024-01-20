@@ -10,7 +10,7 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - run: echo "Adios mundo"
+      - run: git --version
 
 workflows:
   flow1:
