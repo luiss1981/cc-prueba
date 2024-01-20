@@ -1,1 +1,13 @@
 version: 2.1
+
+jobs:
+  saluda:
+    docker:
+      - image: cimg/base:stabl
+    steps:
+      - run: echo "Hola mundo"
+
+workflows:
+  helllo:
+    jobs:
+      - saluda
