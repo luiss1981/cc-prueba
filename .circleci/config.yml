@@ -11,7 +11,7 @@ jobs:
       - image: python:3.10-slim-buster
     steps:
       - run: python3
-      - run: print("hola mundo") 
+      - run: 'print("hola mundo")' 
 
 workflows:
   hello:
