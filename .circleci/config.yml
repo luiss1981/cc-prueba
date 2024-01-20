@@ -10,8 +10,11 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:BUZHqUiqV7cNr8OvpmqbrDap8cT4oe4ZFi3ePqrrZeg"
       - run: mkdir app
-      - run: cd app && git clone git@github.com:luiss1981/cc-prueba.git -y
+      - run: cd app && git clone git@github.com:luiss1981/cc-prueba.git
 
 workflows:
   flow1:
