@@ -6,8 +6,15 @@ jobs:
       - image: cimg/base:stable
     steps:
       - run: echo "Hola mundo"
+  instalacion_python:
+    docker:
+      - image: python3.10-slim-buster
+    steps:
+      - run: python3
+      - run: print("hola mundo") 
 
 workflows:
   hello:
     jobs:
       - saluda
+      - instalacion_python
