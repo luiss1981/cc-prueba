@@ -8,6 +8,6 @@ jobs:
       - run: echo "Hola mundo"
 
 workflows:
-  helllo:
+  hello:
     jobs:
       - saluda
