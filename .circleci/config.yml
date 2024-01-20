@@ -8,7 +8,7 @@ jobs:
       - run: echo "Hola mundo"
   instalacion_python:
     docker:
-      - image: python3.10-slim-buster
+      - image: python:3.10-slim-buster
     steps:
       - run: python3
       - run: print("hola mundo") 
