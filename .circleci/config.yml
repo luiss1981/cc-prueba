@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   saluda:
     docker:
-      - image: cimg/base:stabl
+      - image: cimg/base:stable
     steps:
       - run: echo "Hola mundo"
 
